@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Mohit Koli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Particles -->
+  <div id="particles"></div>
+  <div class="blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Mohit Koli</a>
+      <button id="nav-toggle">☰</button>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="BLog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container contact-grid">
+      
+      <!-- Left Info -->
+      <div>
+        <h2 class="hero-title">Get in <span id="typewriter">Touch</span></h2>
+        <p class="hero-sub">
+          I’d love to hear from you! Whether you want to collaborate, discuss a project idea, 
+          or just say hello, feel free to reach out. 🚀
+        </p>
+
+        <div class="contact-info">
+          <div class="info-box reveal">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:mohit@example.com">mohit@example.com</a></p>
+          </div>
+          <div class="info-box reveal">
+            <h3>📱 Phone</h3>
+            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+          </div>
+          <div class="info-box reveal">
+            <h3>🌐 Social</h3>
+            <p>
+              <a href="https://github.com/mohit" target="_blank">GitHub</a> · 
+              <a href="https://linkedin.com/in/mohit" target="_blank">LinkedIn</a> · 
+              <a href="https://twitter.com/mohit" target="_blank">Twitter</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form -->
+      <div class="card-3d">
+        <div class="card-surface">
+          <h3 class="card-name">Contact Form</h3>
+          <form action="submit_form.php" method="post" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Mohit Koli. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Reveal Animation
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (let el of reveals) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add("active");
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
